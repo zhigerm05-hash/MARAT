@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Четырелапы» жануарлар панасы - Семей</title>
+    <!-- CSS стилін қосу -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Иконкалар үшін FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ШАТЫР ЖӘНЕ НАВИГАЦИЯ -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-paw"></i>
+                <span data-kz="ЧЕТЫРЕЛАПЫ" data-ru="ЧЕТЫРЕЛАПЫ">ЧЕТЫРЕЛАПЫ</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" data-kz="Басты бет" data-ru="Главная">Басты бет</a></li>
+                    <li><a href="#catalog" data-kz="Біздің жануарлар" data-ru="Наши животные">Біздің жануарлар</a></li>
+                    <li><a href="#help" data-kz="Қалай көмектесуге болады?" data-ru="Как помочь?">Қалай көмектесуге болады?</a></li>
+                    <li><a href="#about" data-kz="Панамыз туралы" data-ru="О приюте">Панамыз туралы</a></li>
+                    <li><a href="#contact" data-kz="Байланыс" data-ru="Контакты">Байланыс</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="lang-btn" class="lang-btn">RU</button>
+                <button id="mobile-menu-btn" class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- БАСТЫ БАННЕР -->
+        <section id="hero" class="hero">
+            <div class="container hero__content">
+                <h1 data-kz="Әрбір жануардың өз үйі болуы керек!" data-ru="У каждого животного должен быть дом!">Әрбір жануардың өз үйі болуы керек!</h1>
+                <p data-kz="«Четырелапы» жануарлар панасы — Семей қаласындағы үйсіз жануарларға қамқорлық жасап, оларға сүйіспеншілік пен жаңа отбасы табуға көмектесетін бастама." 
+                   data-ru="Приют «Четырелапы» — это инициатива в городе Семей, заботящаяся о бездомных животных и помогающая им найти любовь и новую семью.">
+                   «Четырелапы» жануарлар панасы — Семей қаласындағы үйсіз жануарларға қамқорлық жасап, оларға сүйіспеншілік пен жаңа отбасы табуға көмектесетін бастама.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#catalog" class="btn btn-primary" data-kz="Досыңды тап" data-ru="Найди друга">Досыңды тап</a>
+                    <a href="#help" class="btn btn-secondary" data-kz="Панаға көмектесу" data-ru="Помочь приюту">Панаға көмектесу</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЖАНУАРЛАР КАТАЛОГЫ -->
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title" data-kz="Біздің жануарлар" data-ru="Наши животные">Біздің жануарлар</h2>
+                
+                <div class="catalog-controls">
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all" data-kz="Барлығы" data-ru="Все">Барлығы</button>
+                        <button class="filter-btn" data-filter="dog" data-kz="Иттер" data-ru="Собаки">Иттер</button>
+                        <button class="filter-btn" data-filter="cat" data-kz="Мысықтар" data-ru="Кошки">Мысықтар</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Жануардың аты бойынша іздеу..." data-kz-placeholder="Жануардың аты бойынша іздеу..." data-ru-placeholder="Поиск по имени животного...">
+                    </div>
+                </div>
+
+                <div id="animal-grid" class="cards">
+                    <!-- JS арқылы толтырылады -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ҚАЛАЙ КӨМЕКТЕСУГЕ БОЛАДЫ? -->
+        <section id="help" class="help">
+            <div class="container">
+                <h2 class="section-title" data-kz="Қалай көмектесуге болады?" data-ru="Как можно помочь?">Қалай көмектесуге болады?</h2>
+                <div class="help-grid">
+                    <div class="help-card">
+                        <i class="fa-solid fa-house-chimney help-icon"></i>
+                        <h3 data-kz="Асырап алу" data-ru="Взять в семью">Асырап алу</h3>
+                        <p data-kz="Жануарға жаңа үй және мейірімді отбасы сыйлаңыз." data-ru="Подарите животному новый дом и любящую семью.">Жануарға жаңа үй және мейірімді отбасы сыйлаңыз.</p>
+                    </div>
+                    <div class="help-card">
+                        <i class="fa-solid fa-hand-holding-heart help-icon"></i>
+                        <h3 data-kz="Ерікті болу" data-ru="Стать волонтером">Ерікті болу</h3>
+                        <p data-kz="Панаға келіп, жануарлармен серуендеп, тазалыққа көмектесіңіз." data-ru="Приезжайте в приют, гуляйте с животными и помогайте с уборкой.">Панаға келіп, жануарлармен серуендеп, тазалыққа көмектесіңіз.</p>
+                    </div>
+                    <div class="help-card">
+                        <i class="fa-solid fa-bowl-food help-icon"></i>
+                        <h3 data-kz="Азық-түлік әкелу" data-ru="Привезти корм">Азық-түлік әкелу</h3>
+                        <p data-kz="Жем, дәрі-дәрмек, ойыншықтар мен жылы көрпелер қажет." data-ru="Нам нужны корма, лекарства, игрушки и теплые пледы.">Жем, дәрі-дәрмек, ойыншықтар мен жылы көрпелер қажет.</p>
+                    </div>
+                    <div class="help-card">
+                        <i class="fa-solid fa-car help-icon"></i>
+                        <h3 data-kz="Тасымалдау" data-ru="Автопомощь">Тасымалдау</h3>
+                        <p data-kz="Жануарларды ветеринарға немесе жаңа үйіне апаруға көмектесіңіз." data-ru="Помогите отвезти животных к ветеринару или в новый дом.">Жануарларды ветеринарға немесе жаңа үйіне апаруға көмектесіңіз.</p>
+                    </div>
+                </div>
+
+                <div class="donation-box">
+                    <h3 data-kz="Қаржылай көмек" data-ru="Финансовая помощь">Қаржылай көмек</h3>
+                    <p data-kz="Сіздің әрбір теңгеңіз жануарларды емдеуге және тамақтандыруға жұмсалады." data-ru="Каждый ваш тенге идет на лечение и питание животных.">Сіздің әрбір теңгеңіз жануарларды емдеуге және тамақтандыруға жұмсалады.</p>
+                    <div class="donation-amounts">
+                        <button class="amount-btn">1 000 ₸</button>
+                        <button class="amount-btn active">3 000 ₸</button>
+                        <button class="amount-btn">5 000 ₸</button>
+                        <button class="amount-btn" data-kz="Өзге сома" data-ru="Другая сумма">Өзге сома</button>
+                    </div>
+                    <button class="btn btn-primary" id="donate-btn" data-kz="Қайырымдылық жасау" data-ru="Сделать пожертвование">Қайырымдылық жасау</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПАНА ТУРАЛЫ -->
+        <section id="about" class="about bg-light">
+            <div class="container about__inner">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left;" data-kz="Панамыз туралы" data-ru="О нашем приюте">Панамыз туралы</h2>
+                    <p data-kz="«Четырелапы» — бұл жай ғана пана емес, бұл үйсіз жануарларға екінші өмір сыйлайтын үміт мекені. Біздің басты мақсатымыз — Семей қаласындағы қараусыз қалған жануарларды құтқару, емдеу және оларға қамқор отбасы табу." data-ru="«Четырелапы» — это не просто приют, это место надежды, дарящее вторую жизнь бездомным животным. Наша главная цель — спасение, лечение и поиск заботливых семей для брошенных животных в Семее.">«Четырелапы» — бұл жай ғана пана емес, бұл үйсіз жануарларға екінші өмір сыйлайтын үміт мекені. Біздің басты мақсатымыз — Семей қаласындағы қараусыз қалған жануарларды құтқару, емдеу және оларға қамқор отбасы табу.</p>
+                    <p data-kz="Біздің қағидаларымыз:" data-ru="Наши принципы:">Біздің қағидаларымыз:</p>
+                    <ul class="about-features">
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-kz="Әр жануарға жеке көңіл бөлу" data-ru="Индивидуальное внимание каждому животному">Әр жануарға жеке көңіл бөлу</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-kz="Міндетті ветеринарлық тексеру және вакцинация" data-ru="Обязательный ветеринарный осмотр и вакцинация">Міндетті ветеринарлық тексеру және вакцинация</span></li>
+                        <li><i class="fa-solid fa-check-circle"></i> <span data-kz="Асырап алушылармен тұрақты байланыста болу" data-ru="Постоянная связь с усыновителями">Асырап алушылармен тұрақты байланыста болу</span></li>
+                    </ul>
+                </div>
+                <div class="manager-card">
+                    <!-- ТЕК СІЗДІҢ СУРЕТІҢІЗ. Ешқандай 'onerror' немесе бөтен сурет жоқ -->
+                    <img src="marat.jpg" alt="Қасымғажы Марат" class="manager-img">
+                    <h3 data-kz="Қасымғажы Марат" data-ru="Касымгажы Марат">Қасымғажы Марат</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 15px;" data-kz="«Четырелапы» жануарлар панасының жетекшісі" data-ru="Руководитель приюта «Четырелапы»">«Четырелапы» жануарлар панасының жетекшісі</p>
+                    <a href="tel:+77751829492" class="btn btn-primary btn-full"><i class="fa-solid fa-phone"></i> <span data-kz="Телефон соғу" data-ru="Позвонить">Телефон соғу</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- БАЙЛАНЫС -->
+        <section id="contact" class="contact">
+            <div class="container contact__inner">
+                <div class="contact-info">
+                    <h2 class="section-title" style="text-align: left;" data-kz="Бізбен байланыс" data-ru="Свяжитесь с нами">Бізбен байланыс</h2>
+                    <p data-kz="Бізге хабарласыңыз немесе панаға келіп кетіңіз. Біз әрқашан ашықпыз!" data-ru="Напишите нам или приезжайте в приют. Мы всегда открыты!">Бізге хабарласыңыз немесе панаға келіп кетіңіз. Біз әрқашан ашықпыз!</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <strong data-kz="Ұйым:" data-ru="Организация:">Ұйым:</strong><br>
+                                <span data-kz="«Четырелапы» жануарлар панасы" data-ru="Приют животных «Четырелапы»">«Четырелапы» жануарлар панасы</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong data-kz="Мекенжай:" data-ru="Адрес:">Мекенжай:</strong><br>
+                                <span data-kz="Семей қаласы, Абай облысы, Қазақстан" data-ru="г. Семей, область Абай, Казахстан">Семей қаласы, Абай облысы, Қазақстан</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong data-kz="Телефон:" data-ru="Телефон:">Телефон:</strong><br>
+                                <a href="tel:+77751829492" style="color: var(--text-main); font-weight: bold; text-decoration: none;">+7 775 182 94 92</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/77751829492" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> <span data-kz="WhatsApp арқылы жазу" data-ru="Написать в WhatsApp">WhatsApp арқылы жазу</span></a>
+                </div>
+                
+                <div class="contact-form-box">
+                    <h3 style="font-size: 24px; margin-bottom: 20px;" data-kz="Хабарлама жіберу" data-ru="Отправить сообщение">Хабарлама жіберу</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-kz="Аты-жөніңіз" data-ru="Ваше имя">Аты-жөніңіз</label>
+                            <input type="text" id="name" required placeholder="Арман" data-kz-placeholder="Арман" data-ru-placeholder="Иван">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-kz="Телефон нөмірі" data-ru="Номер телефона">Телефон нөмірі</label>
+                            <input type="tel" id="phone" required placeholder="+7 (___) ___ __ __">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-kz="Хабарлама мәтіні" data-ru="Текст сообщения">Хабарлама мәтіні</label>
+                            <textarea id="message" rows="4" required placeholder="Сұрағыңызды жазыңыз..." data-kz-placeholder="Сұрағыңызды жазыңыз..." data-ru-placeholder="Напишите ваш вопрос..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" data-kz="Жіберу" data-ru="Отправить">Жіберу</button>
+                        <div id="formStatus" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer-logo">
+                    <h3><i class="fa-solid fa-paw"></i> ЧЕТЫРЕЛАПЫ</h3>
+                    <p data-kz="«Әрбір жануар махаббат пен қамқорлыққа лайық»" data-ru="«Каждое животное заслуживает любви и заботы»">«Әрбір жануар махаббат пен қамқорлыққа лайық»</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-kz="Навигация" data-ru="Навигация">Навигация</h4>
+                    <ul>
+                        <li><a href="#hero" data-kz="Басты бет" data-ru="Главная">Басты бет</a></li>
+                        <li><a href="#catalog" data-kz="Жануарлар" data-ru="Животные">Жануарлар</a></li>
+                        <li><a href="#help" data-kz="Көмектесу" data-ru="Помочь">Көмектесу</a></li>
+                        <li><a href="#about" data-kz="Пана туралы" data-ru="О приюте">Пана туралы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4 data-kz="Байланыс" data-ru="Контакты">Байланыс</h4>
+                    <p><i class="fa-solid fa-location-dot"></i> <span data-kz="Семей қ., Қазақстан" data-ru="г. Семей, Казахстан">Семей қ., Қазақстан</span></p>
+                    <p><i class="fa-solid fa-user"></i> <span data-kz="Жетекші: Қ.Марат" data-ru="Руководитель: К.Марат">Жетекші: Қ.Марат</span></p>
+                    <p><i class="fa-solid fa-phone"></i> +7 775 182 94 92</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span data-kz="«Четырелапы» жануарлар панасы." data-ru="Приют «Четырелапы».">«Четырелапы» жануарлар панасы.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS скриптін қосу -->
+    <script src="app.js"></script>
+</body>
+</html>
